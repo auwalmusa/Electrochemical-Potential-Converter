@@ -94,7 +94,7 @@ with col1:
         # but we can use session state as a workaround for next refresh
         st.session_state['from_ref'] = to_ref
         st.session_state['to_ref'] = from_ref
-        st.experimental_rerun()
+        st.rerun()
     
     # Apply session state if it exists
     if 'from_ref' in st.session_state:
@@ -164,7 +164,7 @@ with col2:
         
         if st.button("Clear History"):
             st.session_state['conversion_history'] = []
-            st.experimental_rerun()
+            st.rerun()
     else:
         st.info("No conversion history yet. Perform a conversion to see it here.")
 
